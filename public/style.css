@@ -1,0 +1,1193 @@
+body {
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+ul {
+    padding: 0;
+    margin: 0
+}
+button:focus { outline: 0 }
+input:focus { outline: 0 }
+
+:root {
+    --color-Black: #0D0D0D;
+}
+
+/*-------------*/
+/*   NAVBAR    */
+/*-------------*/
+
+.navBar_container {
+    /*height: 110px;*/
+    border-bottom: 0.5px solid #949696;
+    position: fixed;
+    /*background-color: transparent;*/
+    background-color:rgba(0, 0, 0, 0.5);
+    width: 100%;
+    z-index: 100;
+}
+
+.navBar {
+    height: 110px;
+    list-style-type: none;
+    float: right;
+    margin-right: 40px;
+    line-height: 110px;
+}
+
+.navBar a {
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 27px;
+    font-size: 35px;
+    color: white;
+}
+
+.navBar a:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.navBar a.active {
+    font-weight: bold;
+    color: #33D5E0;
+}
+
+.navBar_container div {
+    float: right;
+}
+
+.logo {
+    width: 190px;
+    position: absolute;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+    top: 60px;
+    z-index: 200;
+    transition: top 0.4s ease;
+}
+
+.logo.visible {
+    top: 210px;
+}
+
+#sandwichBtn {
+    display: none;
+}
+
+/*====================*/
+/*   TOP COMPONENT    */
+/*====================*/
+
+.topComponent {
+    /*background: #6441A5;*/
+    background:
+            linear-gradient(
+                rgba(0, 0, 0, 0.6),
+                rgba(0, 0, 0, 0.6)
+            ),
+            url("./img/background.png");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;    /*height: calc(100vh - 30vh);*/
+    /*height: calc(100vh - 30vh);*/
+    position: relative;
+}
+
+.slogan {
+    padding-top: 30vh;
+    text-align: center;
+    font-size: 49px;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.input_container {
+    width: 620px;
+    margin-left:auto;
+    margin-right:auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    bottom: 20vh;
+    right: 0;
+    left: 0;
+}
+
+#email {
+    height: 67px;
+    text-align: center;
+    width: 95%;
+    font-size: 26px;
+    border-radius: 11px;
+    border: none;
+}
+
+#submit_button {
+    margin-top: 5vh;
+    width: 70%;
+    height: 55px;
+    background-color: #896EAD;
+    cursor: pointer;
+    line-height: 35px;
+    text-align: center;
+    transition: background 0.2s;
+    font-size: 25px;
+    border-radius: 3px;
+    border: solid 2px;
+    color: #FFF;
+}
+
+#submit_button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px darkgray;
+    background-color: #400080;
+}
+
+.arrow {
+    width: 510px;
+    margin-left:auto;
+    margin-right:auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    left: 0;
+}
+
+.arrow p {
+    font-size: 30px;
+    color: white;
+    margin: 0;
+}
+
+.arrow img {
+    padding-top: 20px;
+    width: 33px;
+}
+
+.bounce {
+    -webkit-animation: bounce 2.5s infinite;
+    animation: bounce 2.5s infinite;
+}
+@-webkit-keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    40% {
+        -webkit-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
+    60% {
+        -webkit-transform: translateY(-7px);
+        transform: translateY(-7px);
+    }
+}
+@keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    40% {
+        -webkit-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
+    60% {
+        -webkit-transform: translateY(-7px);
+        transform: translateY(-7px);
+    }
+}
+
+
+/*=======================*/
+/*   MIDDLE COMPONENT    */
+/*=======================*/
+
+.middleComponent {
+    height: 100vh;
+    min-height: 880px;
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    /*align-items: stretch;*/
+}
+
+/*------------------*/
+/*   LEFT CONTENT   */
+/*------------------*/
+
+.left-content_container {
+    float: left;
+    width: 50%;
+    height: 100%;
+
+    background: #2DC7D1; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#2DC7D1, #12ABE5); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#2DC7D1, #12ABE5); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#2DC7D1, #12ABE5); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#2DC7D1, #12ABE5); /* Standard syntax */
+}
+
+.navSpace {
+    height: 110px;
+}
+
+.left_content {
+    height: calc(100% - 110px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hints {
+    font-size: 24px;
+    color: #FFFFFF;
+    position: absolute;
+}
+
+#top_hint {
+    position: absolute;
+    top: 160px;
+    left: -90px;
+    text-align: right;
+}
+
+#left_hint {
+    position: absolute;
+    top: 455px;
+    left: -98px;
+    text-align: right;
+}
+
+#right_hint {
+    position: absolute;
+    top: 455px;
+    left: 375px;
+    white-space: nowrap;
+}
+
+#iPhone_device {
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    height: 734px;
+    width: 359px;
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    background-color: #020202;
+    border: 3px solid #908b85;
+    border-radius: 50px;
+    box-shadow: 7px 10px 34px 1px rgba(0, 0, 0, 0.5), inset -1px -6px 12px 0.1px #343434;
+}
+
+#iPhone_device .camera {
+    position: absolute;
+    margin-top: 33px;
+    margin-left: 118px;
+    height: 7px;
+    width: 7px;
+    background-color: #000040;
+    border-radius: 100%;
+    border: 3px solid #282828;
+    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.5), inset -0.1px -1px 2px 0.1px gray;
+}
+
+#iPhone_device .sound {
+    margin-top: 38px;
+    height: 4px;
+    width: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #303030;
+    border-radius: 15%;
+}
+
+#iPhone_device .touchpad {
+    margin-top: 17px;
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #212120;
+    border-radius: 100%;
+    box-shadow: 7px 10px 34px 1px rgba(0, 0, 0, 0.5), inset -0.1px -1px 2px 0.1px gray;
+}
+
+#iPhone_device .interface {
+    margin-top: 42px;
+    margin-left: 10px;
+    margin-right: 10px;
+    /*background-color: white;*/
+    background-color: #0D0D0D;
+    height: 568px;
+    position: relative;
+}
+
+/* PHONE INTERFACE */
+
+.iPhone_StatusBar {
+    width: 100%;
+}
+
+.iPhone_NavBar {
+    position: relative;
+    height: 32px;
+}
+
+.iPhone_NavBar .search_icon {
+    float: left;
+    margin-left: 10px;
+    height: 20px;
+}
+
+.iPhone_NavBar .logo_icon {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    height: 35px;
+}
+
+.iPhone_NavBar .search_icon {
+    float: left;
+    margin-left: 10px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.iPhone_NavBar .balanceBox {
+    float: right;
+    height: 18px;
+    background-color: #33D5E0;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 12px;
+}
+
+.balance_container {
+    margin-left: 11px;
+    margin-right: 3px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.balance_dollarSign {
+    display: flex;
+    align-self: flex-end;
+    color: #0D0D0D;
+    font-size: 8px;
+    font-family: "HelveticaNeue-Italic", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    padding-bottom: 1px;
+    margin-right: 1px;
+}
+
+.balance_number {
+    display: flex;
+    margin-right: 1px;
+    align-self: flex-end;
+    color: #0D0D0D;
+    font-size: 15px;
+    font-family: "HelveticaNeue-Italic", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.balance_decimals {
+    display: flex;
+    align-self: flex-end;
+    padding-bottom: 1px;
+    font-size: 8px;
+}
+
+.stockInfo p {
+    margin: 0;
+}
+
+.leftInfo {
+    border: 0.5px solid #00ADEF;
+    border-radius: 10px;
+    float: left;
+    margin-top: 15px;
+    margin-left: 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+.stockName {
+    height: 13px;
+    color: #FFFFFF;
+    font-size: 19px;
+    font-family: "HelveticaNeue-UltraLight", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+#ticker_input {
+    text-align: center;
+    margin-top: 10px;
+    width: 100px;
+    height: 30px;
+    /*text-align: center;*/
+    border: none;
+    background-color: #0D0D0D;
+    color: #FFFFFF;
+    font-size: 25px;
+    font-family: "HelveticaNeue-Thin", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    text-transform: uppercase;
+}
+
+.rightInfo {
+    float: right;
+    margin-right: 5px;
+}
+
+.stockName {
+    color: #FFFFFF;
+    font-size: 15px;
+    font-family: "HelveticaNeue-Thin", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.stockTicker {
+    padding-top: 6px;
+    color: #FFFFFF;
+    font-size: 23px;
+    font-family: "HelveticaNeue-Thin", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+/* PriceTag */
+
+.priceTag_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    /*margin-right: 7px;*/
+}
+
+.priceTag_dollarSign {
+    display: flex;
+    align-self: flex-end;
+    color: #00ADEF;
+    font-size: 25px;
+    font-family: "HelveticaNeue-UltraLight", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    padding-bottom: 6px;
+    margin-right: 1px;
+}
+
+.priceTag_number {
+    display: flex;
+    margin-right: 1px;
+    align-self: flex-end;
+    color: #00ADEF;
+    font-size: 50px;
+    font-family: "HelveticaNeue-UltraLight", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.priceTag_decimals {
+    display: flex;
+    align-self: flex-end;
+    padding-bottom: 6px;
+    font-size: 25px;
+}
+
+.profit_percent {
+    color: #33D5E0;
+    font-size: 21px;
+    font-family: "HelveticaNeue-Thin", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    /*margin-right: 7px;*/
+}
+
+.metrics {
+    margin-left:auto;
+    margin-right:auto;
+    position: absolute;
+    bottom: 128px;
+    right: 0;
+    left: 0;
+}
+
+/* SHARE QUANTITY */
+
+.qty_container {
+    float: left;
+}
+.qty_container p {
+    text-align: center;
+    border: 0.5px solid #33D5E0;
+    border-bottom-right-radius: 12px;
+    border-top-right-radius: 12px;
+    padding: 5px;
+    margin: 0;
+    font-size: 16px;
+    color: #FFFFFF;
+    font-family: "HelveticaNeue-UltraLight", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+#qty_input {
+    width: 121px;
+    height: 40px;
+    text-align: center;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border: none;
+    background-color: #33D5E0;
+    color: #0D0D0D;
+    font-size: 30px;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* ESTIMATED COST */
+
+.estimatedCost_container {
+    float: right;
+}
+
+.estimatedCost_container p {
+    text-align: center;
+    border: 0.5px solid #00ADEF;
+    border-bottom-left-radius: 12px;
+    border-top-left-radius: 12px;
+    padding: 5px;
+    margin: 0;
+    font-size: 16px;
+    color: #FFFFFF;
+    font-family: "HelveticaNeue-UltraLight", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+}
+
+.cost_input_container {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    background-color: #00ADEF;
+    color: #0D0D0D;
+}
+
+.dollar_container {
+    display: flex;
+    align-self: flex-end;
+    padding-bottom: 3px;
+    padding-left: 5px;
+    margin-right: 2px;
+}
+
+.dollar_container span {
+    font-size: 20px;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+}
+
+.cost_container {
+}
+
+#cost_input {
+    background-color: #00ADEF;
+    width: 103px;
+    height: 38px;
+    text-align: center;
+    border: none;
+    color: #0D0D0D;
+    font-size: 30px;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+#slider {
+
+}
+
+#qty_slider {
+    position: absolute;
+    bottom: 86px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type=range] {
+    width: 90%;
+    height: 8px;
+    border-radius: 10px;
+    -webkit-appearance: none;
+    background: #7F8183;
+    cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height:30px;
+    width:30px;
+    border: 2px solid #1A1A1A;
+    border-radius: 50%;
+    background: #33D5E0;
+    cursor: pointer;
+}
+
+.buy_button {
+    width: 210px;
+    height: 44px;
+    background-color: #00ADEF;
+    cursor: pointer;
+    line-height: 40px;
+    text-align: center;
+    transition: background 0.2s;
+    font-size: 31px;
+    border-radius: 12px;
+    border: solid 1px;
+    color: #0D0D0D;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    position: absolute;
+    bottom: 13px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.buy_button:active {
+    opacity: 0.3;
+}
+
+/*------------------*/
+/*   RIGHT CONTENT  */
+/*------------------*/
+
+.right-content_container {
+    font-family: 'Ropa Sans', sans-serif;
+
+    background: #676666; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#676666, #0D0D0D); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#676666, #0D0D0D); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#676666, #0D0D0D); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#676666, #0D0D0D); /* Standard syntax */
+
+    float: right;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    /*flex-direction: column;*/
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+}
+
+.right_content {
+    width: 100%;
+    top: 110px;
+    position: absolute;
+    /*height: 760px;*/
+    margin-top: 10px;
+    /*margin-bottom: 10px;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 53px;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.header {
+    font-size: 53px;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.header span {
+    color: #7CDF33;
+}
+
+.progressbar_container {
+    margin-right: 2em;
+    margin-left: 2em;
+    align-self: stretch;
+    background-color: #000000;
+    border-radius: 13px; /* (height of inner div) / 2 + padding */
+    padding: 4px;
+}
+
+#progressbar {
+    background: #66ff00;
+    background:-webkit-linear-gradient(right, #66ff00, #ff0033);
+    background: -moz-linear-gradient(right, #66ff00, #ff0033);
+    background: -ms-linear-gradient(right, #66ff00, #ff0033);
+    background: -o-linear-gradient(right, #66ff00, #ff0033);
+    background: linear-gradient(to left, #66ff00, #ff0033);
+    width: 20%; /* Adjust with JavaScript */
+    height: 15px;
+    border-radius: 13px;
+
+    -webkit-transition: width 2s; /* Safari 3.1 to 6.0 */
+    transition: width 2s;
+}
+
+.progressbar_text_container {
+    align-self: flex-end;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.progressbar_text_container img {
+    margin-bottom: -3px;
+}
+
+.progressbar_text {
+    margin-left: 10px;
+    margin-right: 3em;
+    color: #FFFFFF;
+    font-size: 21px;
+}
+
+.portfolio_columns {
+    display: flex;
+    flex-direction: row;
+    font-size: 36px;
+    color: #969696;
+    width: 600px;
+    margin-bottom: 10px;
+}
+
+.portfolio {
+    flex-direction: column;
+    height: 500px;
+    width: 600px;
+    overflow-y: auto;
+}
+
+#empty {
+    flex: 0.27;
+}
+
+#columnTitles {
+    flex: 0.73;
+    display: flex;
+    justify-content: space-around;
+}
+
+.portfolio_item {
+    margin-bottom: 30px;
+    height: 65px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    line-height: 65px;
+    text-align: center;
+    font-size: 36px;
+}
+
+.portfolio_item .x {
+    flex: 0.1;
+    cursor: pointer;
+}
+
+.portfolio_item .ticker {
+    background-color: #33D4DF;
+    flex: 0.2;
+    color: #000000;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+}
+.portfolio_item .price {
+    flex: 0.27;
+    color: #00ADEF;
+    font-size: 43px;
+    background-color: black;
+}
+.portfolio_item .shares {
+    flex: 0.26;
+    color: #00ADEF;
+    font-size: 43px;
+    background-color: black;
+
+}
+.portfolio_item .cost {
+    flex: 0.27;
+    color: #00ADEF;
+    font-size: 43px;
+    background-color: black;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+/*======================*/
+/*   BOTTOM COMPONENT   */
+/*======================*/
+
+.bottomComponent {
+    height: 100vh;
+    background-color: #0D0D0D;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.beta {
+    font-size: 68px;
+    color: #ffffff;
+    margin: 0;
+    padding-top: 28px;
+}
+
+.summer {
+    font-size: 42px;
+    color: #32D5DE;
+    margin: 0;
+    padding-top: 19px;
+}
+
+.summer span {
+    color: #00ADED;
+}
+
+@media only screen and (max-width : 1366px) {
+    .navBar {
+        height: 66px;
+        line-height: 66px;
+    }
+    .navBar a {
+        font-size: 30px;
+    }
+    .logo {
+        width: 137px;
+        top: 30px;
+        z-index: 200;
+    }
+    .slogan {
+        font-size: 38px;
+    }
+
+    .input_container {
+        width: 480px;
+    }
+
+    #email {
+        height: 57px;
+        font-size: 18px;
+    }
+
+    #submit_button {
+        height: 42px;
+        line-height: 30px;
+        font-size: 17px;
+    }
+    .arrow {
+        width: 480px;
+    }
+
+    .arrow p {
+        font-size: 21px;
+    }
+
+    .arrow img {
+        width: 22px;
+    }
+
+    .title {
+        font-size: 40px;
+    }
+
+    .header {
+        font-size: 40px;
+    }
+
+    .portfolio_columns {
+        font-size: 27px;
+        width: 550px;
+    }
+
+    .portfolio {
+        width: 550px;
+    }
+
+    .portfolio_item {
+        height: 50px;
+        line-height: 50px;
+        font-size: 28px;
+    }
+
+    .portfolio_item .price {
+        font-size: 32px;
+    }
+    .portfolio_item .shares {
+        font-size: 32px;
+    }
+    .portfolio_item .cost {
+        font-size: 32px;
+    }
+
+    .logo_mini {
+        width: 86px;
+    }
+
+    .beta {
+        font-size: 53px;
+        padding-top: 23px;
+    }
+
+    .summer {
+        font-size: 32px;
+        padding-top: 15px;
+    }
+
+    .firstTwoPhotos {
+        margin-top: 110px !important;
+    }
+}
+
+@media only screen and (max-width : 1200px) {
+    .left-content_container {
+        width: 100%;
+
+    }
+    .right-content_container {
+        width: 100%;
+
+    }
+    .bottomComponent {
+        clear: right;
+    }
+
+    #teamPage {
+        height: auto !important;
+    }
+
+    .firstTwoPhotos {
+        margin-top: 130px !important;
+        flex-direction: column !important;
+    }
+    .secondTwoPhotos {
+        flex-direction: column !important;
+    }
+
+    .logo {
+        transition: top 0.4s ease;
+    }
+
+    .logo.visible {
+        top: 240px;
+    }
+}
+
+@media only screen and (max-width : 992px) {
+
+    .navBar {
+        clear: both;
+        margin-right: 0;
+        list-style-type: none;
+        float: none;
+        text-align: center;
+        height: 210px;
+        line-height: 55px;
+
+        max-height: 0;
+        overflow: hidden;
+        -webkit-transition: max-height 0.4s ease; /* Safari 3.1 to 6.0 */
+        transition: max-height 0.4s ease;
+    }
+
+    .navBar.visible {
+        max-height: 210px;
+    }
+
+    .navBar a {
+        display: block;
+        margin-left: 0;
+    }
+
+    .logo {
+        top: 35px;
+        width: 120px;
+    }
+
+    .logo.visible {
+        top: 245px;
+    }
+
+    #sandwichBtn {
+        cursor: pointer;
+        height: 36px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        margin-right: 15px;
+        float: right;
+        display: block;
+    }
+}
+
+@media only screen and (max-width : 768px) {
+
+    .navBar a {
+        font-size: 30px;
+        line-height: 50px;
+    }
+
+    #sandwichBtn {
+        height: 32px;
+        margin-top: 12px;
+        margin-bottom: 12px;
+        margin-right: 15px;
+    }
+
+    .navBar.visible {
+        max-height: 190px;
+    }
+
+    .logo {
+        top: 30px;
+        width: 100px;
+    }
+
+    .logo.visible {
+        top: 220px;
+    }
+
+    .slogan {
+        font-size: 30px;
+    }
+
+    .input_container {
+        width: 440px;
+    }
+
+    #email {
+        height: 47px;
+        font-size: 18px;
+    }
+
+    .navSpace {
+        height: 80px;
+    }
+
+    .title {
+        font-size: 34px;
+        margin-bottom: 16px;
+    }
+
+    .header {
+        font-size: 34px;
+    }
+
+    .progressbar_text_container img {
+        height: 16px;
+    }
+
+    .progressbar_text {
+        font-size: 18px;
+    }
+
+    .portfolio_columns {
+        font-size: 24px;
+        width: 500px;
+        margin-bottom: 5px;
+    }
+    .portfolio {
+        width: 500px;
+    }
+
+    .portfolio_item {
+        height: 50px;
+        line-height: 50px;
+        font-size: 26px;
+    }
+
+    .portfolio_item .price {
+        font-size: 29px;
+    }
+    .portfolio_item .shares {
+        font-size: 29px;
+    }
+    .portfolio_item .cost {
+        font-size: 29px;
+    }
+
+    .logo_mini {
+        width: 86px;
+    }
+
+    .beta {
+        font-size: 42px;
+        padding-top: 14px;
+    }
+
+    .summer {
+        font-size: 32px;
+        padding-top: 14px;
+    }
+}
+
+
+/*+++++++++++++++*/
+/*   TEAM PAGE   */
+/*+++++++++++++++*/
+
+#teamPage {
+    background-color: #0D0D0D;
+    /*height: 100vh;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.firstTwoPhotos {
+    margin-top: 170px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.secondTwoPhotos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.description {
+    color: #95989A;
+    font-size: 20px;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+.profile_field {
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center;
+}
+/*++++++++++++++++++*/
+/*   CONTACT PAGE   */
+/*++++++++++++++++++*/
+
+#contactPage {
+    /*background: #6441A5;*/
+    background-color: #0D0D0D;
+    background-image: url("./img/citybackdrop.png");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
